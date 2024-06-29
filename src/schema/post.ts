@@ -7,5 +7,7 @@ export const PostTable = pgTable("post", {
   averageRating: real("average_rating").notNull().default(0),
   createdAt: time("created_at").defaultNow().notNull(),
   updateddAt: time("updated_at").defaultNow().notNull(),
-  authorId: uuid("author_id").references(() => UserTable.id),
+  authorId: uuid("author_id").references(() => UserTable.id, {
+    onDelete: "cascade",
+  }),
 });
