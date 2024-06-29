@@ -1,0 +1,14 @@
+{
+  "name": "vanila-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "tsx": "tsx watch ./src/main.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.15.8",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1"
+  }
+}
