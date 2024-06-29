@@ -1,14 +1,22 @@
 {
-  "name": "vanila-ts",
+  "name": "ts-drizzle-neon",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "tsx": "tsx watch ./src/main.ts"
+    "tsx": "tsx watch ./src/main.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/migrate.ts"
   },
   "devDependencies": {
+    "drizzle-kit": "^0.22.7",
     "tsx": "^4.15.8",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.4",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.31.2"
   }
 }
